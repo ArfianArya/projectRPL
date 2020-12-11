@@ -30,28 +30,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Model model = mList.get(position);
-        holder.unameView.setText(model.getUname());
-        holder.nomorHPView.setText(model.getNomorHP());
-        holder.almtView.setText(model.getAlmt());
+        holder.username.setText(mList.get(position).getUsername());
+        holder.nomorHp.setText(mList.get(position).getNomorHp());
+        holder.alamat.setText(mList.get(position).getAlamat());
     }
+
 
     @Override
     public int getItemCount() {
         return mList.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-
-        TextView unameView, nomorHPView, almtView;
-
-        public MyViewHolder(@NonNull View itemView) {
+    static class MyViewHolder extends RecyclerView.ViewHolder{
+        TextView username, nomorHp, alamat;
+        public MyViewHolder(View itemView){
             super(itemView);
-
-            unameView = itemView.findViewById(R.id.usernameText);
-            nomorHPView = itemView.findViewById(R.id.nomorHPText);
-            almtView = itemView.findViewById(R.id.alamatText);
-
+            username = (TextView) itemView.findViewById(R.id.usernameText);
+            nomorHp = (TextView)itemView.findViewById(R.id.nomorHPText);
+            alamat = (TextView) itemView.findViewById(R.id.alamatText);
         }
     }
+
 }
