@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button informasiSampah = findViewById(R.id.btnMelihatInformasiSampah);
+        informasiSampah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ListSampah.class));
+                finish();
+            }
+        });
+
 
         Button logout = findViewById(R.id.logoutBtn);
         logout.setOnClickListener(new View.OnClickListener() {

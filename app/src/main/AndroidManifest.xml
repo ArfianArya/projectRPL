@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListJemputSampah"></activity>
+        <activity android:name=".ListSampah"></activity>
+        <activity android:name=".ListJemputSampah" />
         <activity android:name=".LayananJemput" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".Login" />
