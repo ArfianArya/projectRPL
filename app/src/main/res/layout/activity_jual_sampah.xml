@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JualSampahActivity">
+
+  <Button
+      android:id="@+id/btnBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Back"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <EditText
+      android:id="@+id/editNamaSampah"
+      android:layout_width="match_parent"
+      android:layout_height="75dp"
+      android:hint="Nama Sampah"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+  <EditText
+      android:id="@+id/editKategoriSampah"
+      android:layout_width="match_parent"
+      android:layout_height="75dp"
+      android:hint="Kategori Sampah"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editNamaSampah" />
+
+  <EditText
+      android:id="@+id/editberatSampah"
+      android:layout_width="match_parent"
+      android:layout_height="75dp"
+      android:hint="Berat Sampah"
+      app:layout_constraintTop_toBottomOf="@+id/editKategoriSampah" />
+
+  <EditText
+      android:id="@+id/editJenisTopUp"
+      android:layout_width="match_parent"
+      android:layout_height="75dp"
+      android:hint="Jenis Top Up"
+      app:layout_constraintTop_toBottomOf="@+id/editberatSampah" />
+
+  <Button
+      android:id="@+id/btnJual"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Jual"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editJenisTopUp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

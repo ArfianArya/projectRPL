@@ -31,7 +31,16 @@ public class MainActivity extends AppCompatActivity {
         informasiSampah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ListSampah.class));
+                startActivity(new Intent(getApplicationContext(), MenuJenisSampah.class));
+                finish();
+            }
+        });
+
+        Button jualSampah = findViewById(R.id.btnJualSampah);
+        jualSampah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), JualSampahActivity.class));
                 finish();
             }
         });

@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListSampah"></activity>
+        <activity android:name=".topUp"></activity>
+        <activity android:name=".JualSampahActivity"></activity>
+        <activity android:name=".ListSampahAnorganik" />
+        <activity android:name=".MenuJenisSampah" />
+        <activity android:name=".ListSampah" />
         <activity android:name=".ListJemputSampah" />
         <activity android:name=".LayananJemput" />
         <activity android:name=".AdminActivity" />
-        <activity android:name=".Login" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

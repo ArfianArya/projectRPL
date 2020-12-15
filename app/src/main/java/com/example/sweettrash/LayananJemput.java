@@ -40,6 +40,9 @@ public class LayananJemput extends AppCompatActivity {
         pesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                checkField(txtuname);
+                checkField(txtnomorhp);
+                checkField(txtalmt);
                 String name = txtuname.getText().toString();
                 String nomorHp = txtnomorhp.getText().toString();
                 String alamat = txtalmt.getText().toString();
@@ -50,12 +53,17 @@ public class LayananJemput extends AppCompatActivity {
                 userMap.put("nomorHp", nomorHp);
                 userMap.put("alamat", alamat);
 
-                root.push().setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(LayananJemput.this, "Pesanan Berhasil Dilakukan", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                if(name.isEmpty() && nomorHp.isEmpty() && alamat.isEmpty()){
+                    Toast.makeText(LayananJemput.this, "Pesanan Gagal dilakukan", Toast.LENGTH_SHORT).show();
+                }else{
+                    root.push().setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(LayananJemput.this, "Pesanan Berhasil Dilakukan", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+
             }
 
         });
@@ -66,5 +74,16 @@ public class LayananJemput extends AppCompatActivity {
                startActivity(new Intent(getApplicationContext(), MainActivity.class));
            }
        });
+    }
+    public boolean checkField(EditText textField){
+        boolean valid;
+        if(textField.getText().toString().isEmpty()){
+            textField.setError("Form Belum Terisi");
+            valid = false;
+        }else {
+            valid = true;
+        }
+
+        return valid;
     }
 }

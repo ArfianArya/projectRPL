@@ -12,10 +12,10 @@ public class ListSampah extends AppCompatActivity {
    RecyclerView.Adapter sampahAdapter;
    RecyclerView.LayoutManager layoutManager;
 
-   String[] namaSampah = {"Botol Bening","Botol Berwarna","Karung Besar","Karung Kecil"};
-   String[] kategoriSampah = {"Plastik","Plastik","Plastik","Plastik"};
-   String[] hargaSampah = {"Rp 2000/kg","Rp 2000/kg","Rp 2000/kg","Rp 2000/kg"};
-   int[] gambarSampah = {R.drawable.botol_bening, R.drawable.botol_berwarna, R.drawable.karung_besar, R.drawable.karung_kecil};
+   String[] namaSampah = {"Kertas","kardus"};
+   String[] kategoriSampah = {"Plastik","Plastik"};
+   String[] hargaSampah = {"Rp.1000/kg","Rp.2000/kg"};
+   int[] gambarSampah = {R.drawable.kertas, R.drawable.kardus};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
