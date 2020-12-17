@@ -59,7 +59,7 @@ public class JualSampahActivity extends AppCompatActivity {
                 userMap.put("beratSampah", beratSampah);
                 userMap.put("jenisTopUp", jenisTopUp);
 
-                if (namaSampah.isEmpty() && kategoriSampah.isEmpty() && beratSampah.isEmpty() && jenisTopUp.isEmpty()){
+                if (namaSampah.isEmpty() || kategoriSampah.isEmpty() || beratSampah.isEmpty() || jenisTopUp.isEmpty()){
                     Toast.makeText(JualSampahActivity.this, "Penjualan Gagal dilakukan", Toast.LENGTH_SHORT).show();
                 }else{
                     root.push().setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {

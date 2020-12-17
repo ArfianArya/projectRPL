@@ -53,7 +53,7 @@ public class LayananJemput extends AppCompatActivity {
                 userMap.put("nomorHp", nomorHp);
                 userMap.put("alamat", alamat);
 
-                if(name.isEmpty() && nomorHp.isEmpty() && alamat.isEmpty()){
+                if(name.isEmpty() || nomorHp.isEmpty() || alamat.isEmpty()){
                     Toast.makeText(LayananJemput.this, "Pesanan Gagal dilakukan", Toast.LENGTH_SHORT).show();
                 }else{
                     root.push().setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
