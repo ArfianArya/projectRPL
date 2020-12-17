@@ -13,10 +13,10 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    ArrayList<Model> mList;
+    ArrayList<ModelDaftarPenjemputan> mList;
     Context context;
 
-    public MyAdapter(Context context, ArrayList<Model> mList){
+    public MyAdapter(Context context, ArrayList<ModelDaftarPenjemputan> mList){
         this.mList = mList;
         this.context = context;
     }

@@ -1,12 +1,12 @@
 package com.example.sweettrash;
 
-public class Model {
+public class ModelDaftarPenjemputan {
 
      private String username, nomorHp, alamat;
 
-     public Model(){}
+     public ModelDaftarPenjemputan(){}
 
-     public Model(String username, String nomorHp, String alamat){
+     public ModelDaftarPenjemputan(String username, String nomorHp, String alamat){
          this.username = username;
          this.nomorHp = nomorHp;
          this.alamat = alamat;

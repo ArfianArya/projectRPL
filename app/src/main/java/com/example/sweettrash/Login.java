@@ -97,7 +97,7 @@ public class Login extends AppCompatActivity {
 
     public boolean checkField(EditText textField){
         if(textField.getText().toString().isEmpty()){
-            textField.setError("Kolom harus diisi");
+            textField.setError("Data yang anda masukkan salah");
             valid = false;
         }else {
             valid = true;

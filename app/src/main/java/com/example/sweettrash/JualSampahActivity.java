@@ -50,6 +50,8 @@ public class JualSampahActivity extends AppCompatActivity {
                 String beratSampah =  txtBeratSampah.getText().toString();
                 String jenisTopUp =  txtJenisTopUp.getText().toString();
 
+//                int finalBeratSampah = Integer.parseInt(beratSampah);
+
                 HashMap<String, String> userMap = new HashMap<>();
 
                 userMap.put("namaSampah", namaSampah);
@@ -63,7 +65,7 @@ public class JualSampahActivity extends AppCompatActivity {
                     root.push().setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(JualSampahActivity.this, "Penjualan Berhasil Dilakukan", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(JualSampahActivity.this, "Data berhasil tersimpan", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }

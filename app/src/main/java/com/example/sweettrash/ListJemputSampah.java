@@ -5,11 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Display;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -24,7 +20,7 @@ public class ListJemputSampah extends AppCompatActivity {
 
     DatabaseReference reference;
     RecyclerView recyclerView;
-    ArrayList<Model> list;
+    ArrayList<ModelDaftarPenjemputan> list;
     MyAdapter adapter;
 
 
@@ -35,7 +31,7 @@ public class ListJemputSampah extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager( new LinearLayoutManager(this));
-        list = new ArrayList<Model>();
+        list = new ArrayList<ModelDaftarPenjemputan>();
 
 
         reference = FirebaseDatabase.getInstance().getReference().child("Pesanan");
@@ -43,7 +39,7 @@ public class ListJemputSampah extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot1: snapshot.getChildren()){
-                    Model mList = dataSnapshot1.getValue(Model.class);
+                    ModelDaftarPenjemputan mList = dataSnapshot1.getValue(ModelDaftarPenjemputan.class);
                     list.add(mList);
                 }
                 adapter = new MyAdapter(ListJemputSampah.this,list);
@@ -53,7 +49,7 @@ public class ListJemputSampah extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(ListJemputSampah.this, "Ada kesalahan", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListJemputSampah.this, "Belum ada pesanan yang masuk", Toast.LENGTH_SHORT).show();
             }
         });
     }
